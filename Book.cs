@@ -7,6 +7,13 @@
         public void Add()
         {
             Console.Write("\n [+] Enter Full Name : "); var name = Console.ReadLine();
+
+                if (BookDictionary.ContainsKey(name.ToUpper()))
+                {
+                    Console.WriteLine(" The Name Already EXITS, Try Again !!");
+                    Add();
+                }
+
             Console.Write(" [+] Enter Address : "); var address = Console.ReadLine();
             Console.Write(" [+] Enter City : "); var city = Console.ReadLine();
             Console.Write(" [+] Enter State : "); var state = Console.ReadLine();

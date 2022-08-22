@@ -5,7 +5,10 @@
         public void Delete()
         {
             Console.Write("\nEnter the name of person to delete : "); var dictionaryKey = Console.ReadLine().ToUpper();
-            BookDictionary.Remove(dictionaryKey);
+            if (dictionaryKey.Contains(dictionaryKey))
+                BookDictionary.Remove(dictionaryKey);
+            else
+                Console.WriteLine("User Not Found. Try Again"); Delete();
         }
     }
     
